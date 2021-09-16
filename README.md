@@ -1,5 +1,11 @@
 # Install
 
+Move vimrc to correct location
+
+```shell
+mv vim-config/vimrc ~/.vimrc
+```
+
 Add plugin manager
 
 ```shell
