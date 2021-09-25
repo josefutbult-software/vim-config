@@ -18,9 +18,6 @@ set number
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 
-" Displays tabs as arrows
-set listchars=tab:▷▷
-
 " Do not let cursor scroll below or above N number of lines when scrolling.
 set scrolloff=10
 
@@ -53,13 +50,17 @@ set hlsearch
 set history=1000
 
 " Set tab width
-set tabstop=8
-set softtabstop=8
-set shiftwidth=8
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
 
 " Make vim always use tabs
 set noexpandtab
 retab
+
+" Display tabs as lines
+set lcs=tab:\|\  " Note the two spaces as last characters
+set list
 
 " Enable spellcheck at start
 set spell
