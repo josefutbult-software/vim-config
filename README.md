@@ -6,6 +6,12 @@ Move vimrc to correct location
 mv vim-config/vimrc ~/.vimrc
 ```
 
+Move vim folder to correct location
+
+```shell
+mv vim-config/vim ~/.vim
+```
+
 Add plugin manager
 
 ```shell
