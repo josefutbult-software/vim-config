@@ -9,9 +9,6 @@ filetype on
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
 
-" Load an indent file for the detected file type.
-filetype indent on
-
 " Turn syntax highlighting on.
 syntax on
 
@@ -21,17 +18,14 @@ set number
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
 
-" Set shift width to 4 spaces.
-set shiftwidth=4
-
-" Set tab width to 4 columns.
-set tabstop=4
+" Displays tabs as arrows
+set listchars=tab:▷▷
 
 " Do not let cursor scroll below or above N number of lines when scrolling.
 set scrolloff=10
 
-" Do not wrap lines. Allow long lines to extend as far as the line goes.
-set nowrap
+" Make vim always wrap lines
+set wrap
 
 " While searching though a file incrementally highlight matching characters as you type.
 set incsearch
@@ -58,16 +52,17 @@ set hlsearch
 " Set the commands to save in history default number is 20.
 set history=1000
 
-" Enable auto completion menu after pressing TAB.
-set wildmenu
+" Set tab width
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 
-" Make wildmenu behave like similar to Bash completion.
-set wildmode=list:longest
+" Make vim always use tabs
+set noexpandtab
+retab
 
-" There are certain files that we would never want to edit with Vim.
-" Wildmenu will ignore files with these extensions.
-set wildignore=*.docx,*.jpg,*.png,*.gif,*.pdf,*.pyc,*.exe,*.flv,*.img,*.xlsx
-
+" Enable spellcheck at start
+set spell
 
 " }}}
 
@@ -89,9 +84,9 @@ call plug#end()
 
 " map_mode <what_you_type> <what_is_executed>
 " map_modes: 
-" 	nnoremap	-	normal mode
-" 	inoremap	-	insert mode
-" 	vnoremap	-	vissual mode
+" nnoremap-	normal mode
+" inoremap-	insert mode
+" vnoremap-	visual mode
 
 " Set the backslash as the leader key.
 let mapleader = "/"
@@ -108,9 +103,6 @@ nnoremap <space> :
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
 nnoremap N Nzz
-
-" Yank from cursor to the end of line.
-nnoremap Y y$
 
 " Map the F5 key to run a Python script inside Vim.
 " I map F5 to a chain of commands here.
@@ -193,3 +185,4 @@ packloadall
 silent! helptags ALL
 
 " }}}
+
