@@ -105,14 +105,6 @@ nnoremap <space> :
 nnoremap n nzz
 nnoremap N Nzz
 
-" Map the F5 key to run a Python script inside Vim.
-" I map F5 to a chain of commands here.
-" :w saves the file.
-" <CR> (carriage return) is like pressing the enter key.
-" !clear runs the external clear screen command.
-" !python3 % executes the current file with Python.
-nnoremap <f5> :w <CR>:!clear <CR>:!python3 % <CR>
-
 " You can split the window in Vim by typing :split or :vsplit.
 " Navigate the split view easier by pressing CTRL+j, CTRL+k, CTRL+h, or CTRL+l.
 nnoremap <c-j> <c-w>j
@@ -134,6 +126,8 @@ nnoremap <F3> :NERDTreeToggle<cr>
 " Have nerdtree ignore certain files and directories.
 let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', '\.pyc$', '\.odt$', '\.png$', '\.gif$', '\.db$']
 
+" Run make on ctrl + m
+nnoremap <f5> :w <CR>:!clear <CR>:!make <CR>
 
 " }}}
 
