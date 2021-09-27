@@ -12,6 +12,9 @@ filetype plugin on
 " Turn syntax highlighting on.
 syntax on
 
+" Autocompletion
+set omnifunc=syntaxcomplete#Complete
+
 " Add numbers to each line on the left-hand side.
 set number
 
@@ -128,6 +131,9 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 
 " Run make on ctrl + m
 nnoremap <f5> :w <CR>:!clear <CR>:!make <CR>
+
+" Run syntax autocomplete
+inoremap <c-P> <C-x><C-o>
 
 " }}}
 
