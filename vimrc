@@ -132,9 +132,6 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 " Run make on ctrl + m
 nnoremap <f5> :w <CR>:!clear <CR>:!make <CR>
 
-" Run syntax autocomplete
-inoremap <c-P> <C-x><C-o>
-
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
