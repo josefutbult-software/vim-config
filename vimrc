@@ -132,6 +132,14 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 " Run make on ctrl + m
 nnoremap <f5> :w <CR>:!clear <CR>:!make <CR>
 
+" Make e and b go to end and beginning of line
+nnoremap <c-e> <end>
+inoremap <c-e> <end>
+vnoremap <c-e> <end>
+nnoremap <c-b> <home>
+inoremap <c-b> <home>
+vnoremap <c-b> <home>
+
 " }}}
 
 " VIMSCRIPT -------------------------------------------------------------- {{{
