@@ -143,24 +143,13 @@ let NERDTreeIgnore=['\.git$', '\.jpg$', '\.mp4$', '\.ogg$', '\.iso$', '\.pdf$', 
 " Run make on ctrl + m
 nnoremap <f5> :w <CR>:!clear <CR>:!make <CR>
 
-" Jedi stuff
-"let g:jedi#goto_command = "<leader>d"
-
-"let g:jedi#goto_assignments_command = "<leader>g"
-
-"let g:jedi#goto_stubs_command = "<leader>s"
-
-"let g:jedi#goto_definitions_command = ""
-
-"let g:jedi#documentation_command = "K"
-
-"let g:jedi#usages_command = "<leader>n"
-
-"let g:jedi#completions_command = "<C-Space>"
-
-"let g:jedi#rename_command = "<leader>r"
-
-" let g:jedi#environment_path = "/usr/bin/python3"
+" Make e and b go to end and beginning of line
+nnoremap <c-e> <end>
+inoremap <c-e> <end>
+vnoremap <c-e> <end>
+nnoremap <c-b> <home>
+inoremap <c-b> <home>
+vnoremap <c-b> <home>
 
 " }}}
 
