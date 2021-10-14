@@ -115,13 +115,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Resize split windows using arrow keys by pressing:
-" CTRL+UP, CTRL+DOWN, CTRL+LEFT, or CTRL+RIGHT.
-noremap <c-up> <c-w>+
-noremap <c-down> <c-w>-
-noremap <c-left> <c-w>>
-noremap <c-right> <c-w><
-
 " NERDTree specific mappings.
 " Map the F3 key to toggle NERDTree open and close.
 nnoremap <F3> :NERDTreeToggle<cr>
@@ -139,6 +132,10 @@ vnoremap <c-e> <end>
 nnoremap <c-b> <home>
 inoremap <c-b> <home>
 vnoremap <c-b> <home>
+
+" Add move line up/down to ctrl up/down
+nnoremap <c-up> :move -2 <CR>
+nnoremap <c-down> :move +1 <CR>
 
 " }}}
 
