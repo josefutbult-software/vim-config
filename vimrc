@@ -1,3 +1,17 @@
+" PLUGINS ---------------------------------------------------------------- {{{
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'dense-analysis/ale'
+
+Plug 'preservim/nerdtree'
+
+Plug 'doums/darcula'
+
+call plug#end()
+
+" }}}
+
 " GENERAL ---------------------------------------------------------------- {{{
 
 " Disable compatibility with vi which can cause unexpected issues.
@@ -12,8 +26,11 @@ filetype plugin on
 " Turn syntax highlighting on.
 syntax on
 
-" Autocompletion
+" Omni autocompletion
 set omnifunc=syntaxcomplete#Complete
+
+" Omni autocompletion for python
+autocmd FileType python set omnifunc=python3complete#Complete
 
 " Add numbers to each line on the left-hand side.
 set number
@@ -70,21 +87,21 @@ set spell
 
 " }}}
 
-" PLUGINS ---------------------------------------------------------------- {{{
+" VIMSCRIPT -------------------------------------------------------------- {{{
 
-call plug#begin('~/.vim/plugged')
+" This will enable code folding.
+" Use the marker method of folding.
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
 
-Plug 'dense-analysis/ale'
-
-Plug 'preservim/nerdtree'
-
-Plug 'doums/darcula'
-
-call plug#end()
+" More Vimscripts code goes here.
 
 " }}}
 
 " MAPPINGS --------------------------------------------------------------- {{{ 
+
 
 " map_mode <what_you_type> <what_is_executed>
 " map_modes: 
@@ -97,12 +114,6 @@ let mapleader = "/"
 
 " Press \\ to jump back to the last cursor position.
 nnoremap <leader>\ ``
-
-" Type jj to exit insert mode quickly.
-inoremap jj <Esc>
-
-" Press the space bar to type the : character in command mode.
-nnoremap <space> :
 
 " Center the cursor vertically when moving to the next word during a search.
 nnoremap n nzz
@@ -136,19 +147,6 @@ vnoremap <c-b> <home>
 " Add move line up/down to ctrl up/down
 nnoremap <c-up> :move -2 <CR>
 nnoremap <c-down> :move +1 <CR>
-
-" }}}
-
-" VIMSCRIPT -------------------------------------------------------------- {{{
-
-" This will enable code folding.
-" Use the marker method of folding.
-augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
-augroup END
-
-" More Vimscripts code goes here.
 
 " }}}
 
