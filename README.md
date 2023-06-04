@@ -23,3 +23,10 @@ Run installer in vim
 ```shell
 :PlugInstall
 ```
+
+Run installers for COC plugins
+
+In Vim
+```shell
+CocInstall coc-rust-analyzer
+```
