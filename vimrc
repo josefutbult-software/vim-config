@@ -270,13 +270,26 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " }}}
 
-" VIMSCRIPT -------------------------------------------------------------- {{{
+" FOLDING -------------------------------------------------------------- {{{
 
 " This will enable code folding.
-" Use the marker method of folding.
+
+" Dont fold anything by default
+set foldlevel=99
+set foldmethod=indent
+
+" Use the marker method of folding for vim config files.
 augroup filetype_vim
-    autocmd!
-    autocmd FileType vim setlocal foldmethod=marker
+	autocmd!
+	autocmd FileType vim setlocal foldlevel=1
+	autocmd FileType vim setlocal foldmethod=marker
+augroup END
+
+" Automatically remember foldings in files
+augroup remember_folds
+	autocmd!
+	autocmd BufWinLeave * mkview
+	autocmd BufWinEnter * silent! loadview
 augroup END
 
 " More Vimscripts code goes here.
