@@ -33,6 +33,16 @@ Plug 'preservim/nerdcommenter'
 
 Plug 'tweekmonster/spellrotate.vim'
 
+" Auto select indentation
+Plug 'tpope/vim-sleuth'
+
+" Auto pair brackets
+Plug 'jiangmiao/auto-pairs'
+
+" Auto surround highlighted text with quotes and brackets
+" Usage: cs"
+Plug 'tpope/vim-surround'
+
 " Rust specific stuff
 "Plug 'rust-lang/rust.vim'
 
@@ -73,6 +83,9 @@ set cursorline
 set scrolloff=10
 
 " Make vim always wrap lines
+set textwidth=80
+set wrapmargin=0
+set formatoptions+=t
 set wrap
 
 " While searching though a file incrementally highlight matching characters as you type.
@@ -105,7 +118,8 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 
-set autoindent
+"set autoindent
+set smartindent
 
 " Display tabs as lines
 set lcs=tab:\|\  " Note the two spaces as last characters
