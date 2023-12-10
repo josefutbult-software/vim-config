@@ -1,0 +1,15 @@
+clangd
+python3-setuptools
+gcc
+g++
+
+## Node-js
+
+Node needs to be v16 or higher. You can refresh the apt repositories with the
+following:
+
+```bash
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+```
+
+Then install nodejs, and it should be version 20
