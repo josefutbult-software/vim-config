@@ -1,15 +1,10 @@
 # Install
 
-Move vimrc to correct location
+Symlink the vimrc file and vim folder to your home folder.
 
 ```shell
-mv vim-config/vimrc ~/.vimrc
-```
-
-Move vim folder to correct location
-
-```shell
-mv vim-config/vim ~/.vim
+ln -s `pwd`/vimrc $HOME/.vimrc
+ln -s `pwd`/vim $HOME/.vim
 ```
 
 Add plugin manager

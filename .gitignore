@@ -1,4 +1,2 @@
-.vim/.netrwhist
-.vim/plugged/*
-.vim/spell/*
-.vim/ftplugin/*
+vim/plugged
+vim/view
