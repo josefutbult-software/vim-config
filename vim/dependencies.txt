@@ -8,6 +8,7 @@ g++
 Node needs to be v16 or higher. You can refresh the apt repositories with the
 following:
 
+Ubuntu
 ```bash
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 ```

@@ -38,7 +38,7 @@ Plug 'tweekmonster/spellrotate.vim'
 Plug 'tpope/vim-sleuth'
 
 " Auto pair brackets
-Plug 'jiangmiao/auto-pairs'
+Plug 'JosefUtbult/auto-pairs'
 
 " Auto surround highlighted text with quotes and brackets
 " Usage: cs"
@@ -52,6 +52,12 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 
 " Rust specific stuff
 Plug 'rust-lang/rust.vim'
+
+" Markdown folding
+Plug 'masukomi/vim-markdown-folding'
+
+" Markdown previewer
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 
 call plug#end()
 
@@ -67,6 +73,9 @@ filetype on
 
 " Enable plugins and load plugin for the detected file type.
 filetype plugin on
+
+" Allow for filetype specific folding
+filetype plugin indent on
 
 " Turn syntax highlighting on.
 syntax on
@@ -159,7 +168,11 @@ nnoremap <c-j> :move +1 <CR>
 " Remap jj to escape
 imap jj <Esc>
 
+" Add popup file explorer with ctrl p
 nnoremap <c-p> :Leaderf --popup file <CR>
+
+" Open markdown preview with leader m p 
+nnoremap <leader>mp :MarkdownPreview <CR>
 
 " }}}
 
@@ -317,16 +330,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " This will enable code folding.
 
-" Dont fold anything by default
+" Don't fold anything by default
 set foldlevel=99
 set foldmethod=indent
-
-" Use the marker method of folding for vim config files.
-augroup filetype_vim
-	autocmd!
-	autocmd FileType vim setlocal foldlevel=1
-	autocmd FileType vim setlocal foldmethod=marker
-augroup END
 
 " Automatically remember foldings in files
 augroup remember_folds
@@ -334,8 +340,6 @@ augroup remember_folds
 	autocmd BufWinLeave * mkview
 	autocmd BufWinEnter * silent! loadview
 augroup END
-
-" More Vimscripts code goes here.
 
 " }}}
 

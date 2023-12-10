@@ -593,4 +593,4 @@ endif
 let b:current_syntax = "nsis"
 
 " ===== Custom stuff ======
-set foldmethod=indent
+setlocal foldmethod=indent
