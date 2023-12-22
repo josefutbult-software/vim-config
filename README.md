@@ -1,6 +1,6 @@
 # Install
 
-Install neo-vim
+Install NeoVim
 
 **Ubuntu**
 ```bash
@@ -21,6 +21,15 @@ source ~/.vimrc
 ```
 
 Now, copy your Vim config files to your Linux home directory
+
+Alias NeoVim to Vim on login. Add the following to `.bashrc`/`.zshrc`
+
+```bash
+# Remap Vim and Vi to NeoVim
+alias vim="nvim"
+alias vi="nvim"
+alias oldvim="vim"
+```
 
 ## Setup
 
