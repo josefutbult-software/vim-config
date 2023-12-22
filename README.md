@@ -1,5 +1,29 @@
 # Install
 
+Install neo-vim
+
+**Ubuntu**
+```bash
+sudo apt install neovim
+```
+
+Add config for NeoVim to use Vim resources
+```bash
+mkdir -p ~/.config/nvim
+vim ~/.config/nvim/init.vim
+```
+
+Add the following
+```bash
+set runtimepath^=~/.vim runtimepath+=~/.vim/after
+let &packpath=&runtimepath
+source ~/.vimrc
+```
+
+Now, copy your Vim config files to your Linux home directory
+
+## Setup
+
 Symlink the vimrc file and vim folder to your home folder.
 
 ```shell
