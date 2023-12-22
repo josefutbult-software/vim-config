@@ -4,7 +4,17 @@ Install NeoVim
 
 **Ubuntu**
 ```bash
-sudo apt install neovim
+sudo apt install neovim python3-pip
+```
+
+**ARCH**
+```bash
+sudo pacman -S neovim python-pip
+```
+
+Install python support
+```bash
+pip install --user neovim --break-system-packages
 ```
 
 Add config for NeoVim to use Vim resources
