@@ -4,7 +4,7 @@ Install NeoVim
 
 **Ubuntu**
 ```bash
-sudo apt install neovim python3-pip python3-neovim
+sudo apt install neovim python3-pip python3-neovim nodejs npm
 ```
 
 **ARCH**
@@ -12,6 +12,15 @@ sudo apt install neovim python3-pip python3-neovim
 sudo pacman -S neovim python-pip
 pip install --user neovim --break-system-packages
 ```
+
+Make sure Node is the latest version
+```bash
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+```
+
+Restart your shell.
 
 Add config for NeoVim to use Vim resources
 ```bash
