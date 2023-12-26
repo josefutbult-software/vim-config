@@ -4,16 +4,12 @@ Install NeoVim
 
 **Ubuntu**
 ```bash
-sudo apt install neovim python3-pip
+sudo apt install neovim python3-pip python3-neovim
 ```
 
 **ARCH**
 ```bash
 sudo pacman -S neovim python-pip
-```
-
-Install python support
-```bash
 pip install --user neovim --break-system-packages
 ```
 
