@@ -394,6 +394,11 @@ vmap <silent> zp <Plug>(SpellRotateBackwardV)
 " Select the darcula colorscheme
 colorscheme darcula
 
+set t_Co=256
+set background=dark
+highlight Normal ctermbg=NONE
+highlight nonText ctermbg=NONE
+
 " }}}
 
 " LOADPACKS --------------------------------------------------------------- {{{
